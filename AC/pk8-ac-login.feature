@@ -1,5 +1,8 @@
 @PK-8
 Feature: Login
+    As a registered user
+    I want to log in with my email and password
+    So that I can access my account
 
     @AC1
     Scenario: Successful login with valid credentials
