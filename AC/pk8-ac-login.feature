@@ -5,7 +5,8 @@ Feature: Login
   So that I can access my account
 
   #Acceptance Criteria:
-  #AC1: A user with an active account can log in with a valid email and password and is redirected to the home page.
+  #AC1: A user with an active account can log in with a valid email 
+  # and password and is redirected to the home page.
   #AC2: Error messages do not reveal which field is incorrect
   #AC3: Session persists after page reload
   #AC4: Account is temporarily locked after 5 failed attempts
@@ -36,14 +37,16 @@ Feature: Login
     Scenario: Login fails with incorrect password
       Given I have an active account with email "ana@gmail.com"
       When I log in with email "ana@gmail.com" and an incorrect password
-      Then I see the message "It was not possible to log in because the email or password is incorrect."
+      Then I see the message "It was not possible to log in because the email 
+      or password is incorrect."
       And I remain on the login page
 
     @AC2
     Scenario: Login fails with incorrect email
       Given I have an active account with email "ana@gmail.com"
       When I log in with email "unknown@gmail.com" and any password
-      Then I see the message "It was not possible to log in because the email or password is incorrect."
+      Then I see the message "It was not possible to log in because the email
+       or password is incorrect."
       And I remain on the login page
 
   Rule: The session persists while the user is logged in
