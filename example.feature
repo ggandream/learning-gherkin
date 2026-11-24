@@ -1,5 +1,6 @@
 
-Feature: Name of the story
+Feature: 
+
 
   Background:
     Given user has an existing account
